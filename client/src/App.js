@@ -7,6 +7,7 @@ import BubblePage from './components/BubblePage';
 
 
 import "./styles.scss";
+import OtherShapes from "./components/OtherShapes";
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
             display BubblePage when you're authenticated 
           */}
           <PrivateRoute path='/bubbles' component={BubblePage}/>
- 
+          <PrivateRoute path='/others' component={OtherShapes}/>
           <Route component={Login} />
         </Switch>
       </div>
