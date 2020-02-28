@@ -26,10 +26,36 @@ In this project you will create a login page and request a token from the server
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
-- [ ] Explain what a token is used for.
-- [ ] What steps can you take in your web apps to keep your data secure?
-- [ ] Describe how web servers work.
-- [ ] Which HTTP methods can be mapped to the CRUD acronym that we use when interfacing with APIs/Servers.
+- [x] Explain what a token is used for.
+- [x] What steps can you take in your web apps to keep your data secure?
+- [x] Describe how web servers work.
+- [x] Which HTTP methods can be mapped to the CRUD acronym that we use when interfacing with APIs/Servers.
+
+## ANSWERS
+1.	A token is given when you first setup a sever login. Typically a long string series of characters and is used to authentic your access via login to a servers secured API database or host.  It is commonly stored in localStorage or cookies and is paired with your username and password.
+
+2.	Use Auth0 for handling authentication using a JWT(JSON Web Token)
+
+Only use read-only credentials for front end use
+
+Server-Side Rendering Attacker-Controlled Initial State
+Sometimes when we render initial state, we dangerously generate a document variable from a JSON string. Vulnerable code looks like this:
+Be careful on how you use links such as…
+data:text/html, <a href="javascript: alert('hello from javascript!')" >click me</a>
+
+instead use 
+javascript: alert("You are vulnerable to XSS!") 
+
+Do not use innerHtml it exposes you to vulnerability
+
+3.	User => Modem => Local Internet Access Provider => Internet infrastructure / Backbone (‘the network’) => server => Hosted website => Front-End => Back-End => Secure Database 
+
+
+4.	Post – create
+Get – Read
+Put – update / replace
+Patch - Update / Modify
+Delete - delete
 
 
 ## Project Set Up
@@ -76,7 +102,7 @@ Build a login form to authenticate your users.
 
 ### API Documentation
 
-  * **[POST]** * to `/api/login`: returns a token to be added to the header of all other requests. Pass in the following credentials as the `body` of the request: `{ username: 'Lambda School', password: 'i<3Lambd4' }`
+  * **[POST]** * to `/api/login`: returns a token to be added to the header of all other requests. Pass in the following credentials as the `body` of the request: `{ username: 'Kim', password: 'enter' }`
   * **[GET]** to `/api/colors`: returns the list of colors and their hex codes.
   * **[POST]** to `/api/colors`: creates a new color object. Pass the color as the `body` of the request (the second argument passed to `axios.post`).
   * **[PUT]** to `/api/colors/:id`: updates the color using the `id` passed as part of the URL. Send the color object with the updated information as the `body` of the request (the second argument passed to `axios.put`).
